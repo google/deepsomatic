@@ -1,0 +1,42 @@
+# Format: google3/devtools/metadata/metadata.proto (go/google3metadata)
+
+presubmit: {
+  path_expression: "//depot/google3/learning/genomics/deepsomatic/..."
+  # Ensure that changes to deepsomatic contain public notes to be added to the
+  # corresponding git commit messages.
+  check_description: {
+    failure_message:
+      "\n"
+      "CL descriptions for changes to learning/genomics/deepsomatic\n"
+      "must contain one or more sections delimited as follows:\n"
+      "\n"
+      "BEGIN_PUBLIC\n"
+      "...text exposed to open source public git repo...\n"
+      "END_PUBLIC\n"
+      "\n"
+      "If your change affects only files that you know are not "
+      "opensourced, you may write something like 'Internal "
+      "change'. You may not leave the section empty. \n"
+    required_regexp:
+      "(^|\\n)\\s*BEGIN_PUBLIC\\s*?\\n"
+      "(.*\\n)*"
+      "\\s*\\S+.*(\\n.*)*\\n"
+      "\\s*END_PUBLIC\\s*?\\n"
+    required_for_cleanup: true
+  }
+}
+tricorder: {
+  enable: Pytype
+}
+
+exported {
+  copybara {
+    config_path: "//depot/google3/learning/genomics/deepsomatic/google/copy.bara.sky"
+  }
+  remote_location: "https://user.git.corp.google.com/shafin/deepsomatic/"
+  owning_team_email: "brain-genomics@google.com"
+  path_expression: "//depot/google3/learning/genomics/deepsomatic/..."
+  request_url: "http://ariane/4274460"
+  reason: OPEN_SOURCE
+  description: "DeepSomatic has been an OSS project since October 2023."
+}
