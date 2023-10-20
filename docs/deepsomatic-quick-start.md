@@ -208,12 +208,12 @@ program from Illumina to evaluate the resulting 10 kilobase vcf file. This
 serves as a quick check to ensure the three DeepSomatic commands ran correctly.
 
 ```bash
-sudo docker pull jmcdani20/hap.py:v0.3.12
+sudo docker pull pkrusche/hap.py:v0.3.9
 
 sudo docker run -it \
 -v ${INPUT_DIR}:${INPUT_DIR} \
 -v ${OUTPUT_DIR}:${OUTPUT_DIR} \
-jmcdani20/hap.py:v0.3.12 /opt/hap.py/bin/som.py \
+pkrusche/hap.py:v0.3.9 /opt/hap.py/bin/som.py \
 ${INPUT_DIR}/SEQC2_truth.chr1.quick_start.vcf.gz \
 ${OUTPUT_DIR}/HCC1395_deepsomatic_quickstart.vcf.gz \
 --restrict-regions ${INPUT_DIR}/SEQC2_truth.chr1.quick_start.bed \
