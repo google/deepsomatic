@@ -75,9 +75,11 @@ chr1    14002   .   T   A   0       RefCall     .       GT:GQ:DP:AD:VAF:PL  0/0:
 chr1    14003   .   C   G   43.8    PASS        .       GT:GQ:DP:AD:VAF:PL  1/1:43:74:0,74:1:43,52,0
 ```
 
-In this example, the variant with `GERMLINE` INFO field is identified as a
-germline variant, the one with `RefCall` is homozygous to the reference and
-the variant with `PASS` in the info field is a somatic variant.
+In this example:
+
+* The variant with `GERMLINE` INFO field is identified as a germline variant
+* The variant with `RefCall` is homozygous to the reference
+* The variant with `PASS` in the info field is a **somatic variant**.
 
 ### Prerequisites
 
