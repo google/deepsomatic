@@ -18,7 +18,10 @@ The following case studies show example runs for supported technologies:
 
 * PacBio tumor-normal whole genome sequencing [case study](docs/deepsomatic-pacbio-case-study.md).
 
-This is the first release of DeepSomatic. Properties such as runtime, accuracy across different sample preparations, and supported technologies will evolve with future releases. Your active feedback will help us prioritize use cases most important for the genomics community.
+This is the first release of DeepSomatic. Properties such as runtime, accuracy
+across different sample preparations, and supported technologies will evolve
+with future releases. Your active feedback will help us prioritize use cases
+most important for the genomics community.
 
 For details around runtime and accuracy expectations, please see the [DeepSomatic metrics page](docs/metrics.md).
 
