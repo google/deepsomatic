@@ -62,7 +62,10 @@ total                            | ~1043m = ~17.38h
 somp.py results
 
 ```
-TODO
+      type  total.truth  total.query     tp    fp    fn  unk  ambi    recall  recall_lower  recall_upper   recall2  precision  precision_lower  precision_upper  na  ambiguous  fp.region.size   fp.rate
+0   indels         1626         1483   1226   257   400    0     0  0.753998      0.732625      0.774467  0.753998   0.826703         0.806811         0.845320   0          0      2875001522  0.089391
+1     SNVs        39447        38389  36992  1397  2455    0     0  0.937765      0.935348      0.940117  0.937765   0.963609         0.961701         0.965448   0          0      2875001522  0.485913
+5  records        41073        39872  38218  1654  2855    0     0  0.930490      0.928000      0.932919  0.930490   0.958517         0.956527         0.960441   0          0      2875001522  0.575304
 ```
 
 ## How to reproduce the metrics on this page
