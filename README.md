@@ -40,7 +40,7 @@ run_deepsomatic \
 --model_type=WGS \ ** Can be either WGS or PACBIO **
 --ref=${INPUT_DIR}/REF.fasta \ **Path to reference fasta file.
 --reads_normal=${INPUT_DIR}/normal.bam \ **Path to normal bam file.
---reads_tumor=${INPUT_DIR}/normal.bam \ * Path to tumor bam file.
+--reads_tumor=${INPUT_DIR}/tumor.bam \ * Path to tumor bam file.
 --output_vcf=${OUTPUT_DIR}/OUTPUT.vcf.gz \ **Path to output VCF file.
 --output_gvcf=${OUTPUT_DIR}/OUTPUT.g.vcf.gz \ **Path to output gVCF file.
 --sample_name_tumor="tumor" \
@@ -48,7 +48,7 @@ run_deepsomatic \
 --num_shards=$(nproc) \ **Total number of threads to use.
 --logging_dir=${OUTPUT_DIR}/logs \ **Log output directory.
 --intermediate_results_dir ${OUTPUT_DIR}/intermediate_results_dir \
---regions=chr1 **Region of the genome, if not provided then runs on whole genome \
+--regions=chr1 \ **Region of the genome, if not provided then runs on whole genome
 --dry_run=false **Default is false. If set to true, commands will be printed out but not executed.
 ```
 
