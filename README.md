@@ -80,9 +80,9 @@ chr1    14003   .   C   G   43.8    PASS        .       GT:GQ:DP:AD:VAF:PL  1/1:
 
 In this example:
 
-* The variant with `GERMLINE` INFO field is identified as a germline variant
-* The variant with `RefCall` is homozygous to the reference
-* The variant with `PASS` in the info field is a **somatic variant**.
+* The variant with `GERMLINE` FILTER status is identified as a germline variant
+* The variant with `RefCall` FILTER status is homozygous to the reference
+* The variant with `PASS` FILTER status is a **somatic variant**.
 
 ### Prerequisites
 
