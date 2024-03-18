@@ -18,10 +18,10 @@ Runtime is  all chromosomes.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 385m39.963s
-call_variants                    | 423m13.271s
-postprocess_variants (with gVCF) | 26m46.040s
-total                            | ~835m = ~13.92h
+make_examples_somatic            | 211m47.27s
+call_variants                    | 255m44.93s
+postprocess_variants (with gVCF) | 27m44.89s
+total                            | ~495m = ~8.25h
 
 ### Accuracy
 
@@ -52,10 +52,10 @@ Runtime is  all chromosomes.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 586m0.088s
-call_variants                    | 409m54.403s
-postprocess_variants (with gVCF) | 46m39.075s
-total                            | ~1043m = ~17.38h
+make_examples_somatic            | 550m49.27s
+call_variants                    | 420m33.01s
+postprocess_variants (with gVCF) | 45m30.93s
+total                            | ~1017m = ~16.95h
 
 ### Accuracy
 
@@ -71,7 +71,7 @@ somp.py results
 ## How to reproduce the metrics on this page
 
 For simplicity and consistency, we report runtime with a
-[CPU instance with 64 CPUs](https://github.com/google/deepvariant/blob/r1.6/docs/deepvariant-details.md#command-for-a-cpu-only-machine-on-google-cloud-platform)
+[CPU instance with 64 CPUs](https://github.com/google/deepvariant/blob/r1.6.1/docs/deepvariant-details.md#command-for-a-cpu-only-machine-on-google-cloud-platform)
 This is NOT the fastest or cheapest configuration.
 
 Use `gcloud compute ssh` to log in to the newly created instance.
@@ -80,7 +80,7 @@ Download and run any of the following case study scripts:
 
 ```
 # Get the script.
-curl -O https://raw.githubusercontent.com/google/deepvariant/r1.6/scripts/inference_deepsomatic.sh
+curl -O https://raw.githubusercontent.com/google/deepvariant/r1.6.1/scripts/inference_deepsomatic.sh
 
 # WGS
 bash inference_deepsomatic.sh --model_preset WGS

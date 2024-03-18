@@ -61,7 +61,7 @@ DeepVariant pipeline consists of 3 steps: `make_examples_somatic`, `call_variant
 ### Running on a CPU-only machine
 
 ```bash
-BIN_VERSION="1.6.0"
+BIN_VERSION="1.6.1"
 
 sudo docker pull google/deepsomatic:"${BIN_VERSION}"
 

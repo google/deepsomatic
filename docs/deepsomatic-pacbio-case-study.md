@@ -19,6 +19,9 @@ and [hap.py](https://github.com/illumina/hap.py),
 
 We will be using GRCh38 for this case study.
 
+The data are originally from
+https://downloads.pacbcloud.com/public/revio/2023Q2/HCC1395/, which has more
+information about the data.
 
 ```bash
 BASE="${HOME}/deepsomatic-pacbio-case-study"
@@ -61,7 +64,7 @@ DeepVariant pipeline consists of 3 steps: `make_examples_somatic`, `call_variant
 ### Running on a CPU-only machine
 
 ```bash
-BIN_VERSION="1.6.0"
+BIN_VERSION="1.6.1"
 
 sudo docker pull google/deepsomatic:"${BIN_VERSION}"
 
