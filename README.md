@@ -16,34 +16,30 @@ sequencing data.
 ## Case studies
 
 The following case studies show example runs for supported technologies:
+
 ### Tumor-normal case-studies
-*   Illumina WGS tumor-normal whole genome sequencing
-    [case study](docs/deepsomatic-case-study-wgs.md).
 
-*   Illumina WES tumor-normal whole genome sequencing
-    [case study](docs/deepsomatic-case-study-wes.md).
+*   Illumina WGS tumor-normal [case study](docs/deepsomatic-case-study-wgs.md).
 
-*   PacBio tumor-normal whole genome sequencing
-    [case study](docs/deepsomatic-case-study-pacbio.md).
+*   Illumina WES tumor-normal [case study](docs/deepsomatic-case-study-wes.md).
 
-*   ONT tumor-normal whole genome sequencing
-    [case study](docs/deepsomatic-case-study-ont.md).
+*   PacBio tumor-normal [case study](docs/deepsomatic-case-study-pacbio.md).
 
-*   FFPE WGS tumor-normal whole genome sequencing
-    [case study](docs/deepsomatic-case-study-ffpe-wgs.md).
+*   ONT tumor-normal [case study](docs/deepsomatic-case-study-ont.md).
 
-*   FFPE WES tumor-normal whole genome sequencing
-    [case study](docs/deepsomatic-case-study-ffpe-wes.md).
+*   FFPE WGS tumor-normal [case study](docs/deepsomatic-case-study-ffpe-wgs.md).
+
+*   FFPE WES tumor-normal [case study](docs/deepsomatic-case-study-ffpe-wes.md).
 
 ### Tumor-only case-studies
-*   Illumina WGS tumor-only whole genome sequencing
+
+*   Illumina WGS tumor-only
     [case study](docs/deepsomatic-case-study-wgs-tumor-only.md).
 
-*   PacBio tumor-only whole genome sequencing
+*   PacBio tumor-only
     [case study](docs/deepsomatic-case-study-pacbio-tumor-only.md).
 
-*   ONT tumor-only whole genome sequencing
-    [case study](docs/deepsomatic-case-study-ont-tumor-only.md).
+*   ONT tumor-only [case study](docs/deepsomatic-case-study-ont-tumor-only.md).
 
 For details around runtime and accuracy expectations, please see the [DeepSomatic metrics page](docs/metrics.md).
 
