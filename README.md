@@ -1,6 +1,6 @@
 # DeepSomatic
 
-[![release](https://img.shields.io/badge/release-v1.6.1-green?logo=github)](https://github.com/google/deepvariant/releases)
+[![release](https://img.shields.io/badge/release-v1.7.0-green?logo=github)](https://github.com/google/deepvariant/releases)
 [![announcements](https://img.shields.io/badge/announcements-blue)](https://groups.google.com/d/forum/deepvariant-announcements)
 [![blog](https://img.shields.io/badge/blog-orange)](https://goo.gl/deepvariant)
 
@@ -10,24 +10,48 @@ DeepSomatic is an extension of deep learning-based variant caller
 tensors from them, classifies each tensor using a convolutional neural network,
 and finally reports somatic variants in a standard VCF or gVCF file.
 
-DeepSomatic supports somatic variant-calling from tumor-normal sequencing data.
+DeepSomatic supports somatic variant-calling from tumor-normal and tumor-only
+sequencing data.
+
+## Case studies
 
 The following case studies show example runs for supported technologies:
+### Tumor-normal case-studies
+*   Illumina WGS tumor-normal whole genome sequencing
+    [case study](docs/deepsomatic-case-study-wgs.md).
 
-* Illumina tumor-normal whole genome sequencing [case study](docs/deepsomatic-illumina-case-study.md).
+*   Illumina WES tumor-normal whole genome sequencing
+    [case study](docs/deepsomatic-case-study-wes.md).
 
-* PacBio tumor-normal whole genome sequencing [case study](docs/deepsomatic-pacbio-case-study.md).
+*   PacBio tumor-normal whole genome sequencing
+    [case study](docs/deepsomatic-case-study-pacbio.md).
 
-This is the first release of DeepSomatic. Properties such as runtime, accuracy
-across different sample preparations, and supported technologies will evolve
-with future releases. Your active feedback will help us prioritize use cases
-most important for the genomics community.
+*   ONT tumor-normal whole genome sequencing
+    [case study](docs/deepsomatic-case-study-ont.md).
+
+*   FFPE WGS tumor-normal whole genome sequencing
+    [case study](docs/deepsomatic-case-study-ffpe-wgs.md).
+
+*   FFPE WES tumor-normal whole genome sequencing
+    [case study](docs/deepsomatic-case-study-ffpe-wes.md).
+
+### Tumor-only case-studies
+*   Illumina WGS tumor-only whole genome sequencing
+    [case study](docs/deepsomatic-case-study-wgs-tumor-only.md).
+
+*   PacBio tumor-only whole genome sequencing
+    [case study](docs/deepsomatic-case-study-pacbio-tumor-only.md).
+
+*   ONT tumor-only whole genome sequencing
+    [case study](docs/deepsomatic-case-study-ont-tumor-only.md).
 
 For details around runtime and accuracy expectations, please see the [DeepSomatic metrics page](docs/metrics.md).
 
-NOTE: At this time, DeepSomatic has not been trained for or optimized for
-FFPE-prepared samples. You will likely not be able to successfully run
-FFPE-prepared data.
+## How to Cite
+
+If you use DeepSomatic in your work, please cite:
+
+[DeepSomatic: Accurate somatic small variant discovery for multiple sequencing technologies]( https://doi.org/10.1101/2024.08.16.608331)
 
 ## How to run DeepSomatic
 
@@ -37,7 +61,7 @@ sudo docker run \
 -v ${OUTPUT_DIR}:${OUTPUT_DIR} \
 google/deepsomatic:"${BIN_VERSION}" \
 run_deepsomatic \
---model_type=WGS \ ** Can be either WGS or PACBIO **
+--model_type=WGS \ ** Can be WGS,WES,PACBIO,ONT,FFPE_WGS,FFPE_WES,WGS_TUMOR_ONLY,PACBIO_TUMOR_ONLY,ONT_TUMOR_ONLY **
 --ref=${INPUT_DIR}/REF.fasta \ **Path to reference fasta file.
 --reads_normal=${INPUT_DIR}/normal.bam \ **Path to normal bam file.
 --reads_tumor=${INPUT_DIR}/tumor.bam \ * Path to tumor bam file.
@@ -49,6 +73,7 @@ run_deepsomatic \
 --logging_dir=${OUTPUT_DIR}/logs \ **Log output directory.
 --intermediate_results_dir ${OUTPUT_DIR}/intermediate_results_dir \
 --regions=chr1 \ **Region of the genome, if not provided then runs on whole genome
+--use_default_pon_filtering=false \ **Set to true for default PON filtering for tumor-only variant calling**
 --dry_run=false **Default is false. If set to true, commands will be printed out but not executed.
 ```
 
@@ -87,7 +112,7 @@ In this example:
 ### Prerequisites
 
 *   Unix-like operating system (cannot run on Windows)
-*   Python 3.8
+*   Python 3.10
 
 ## Contribution Guidelines
 
