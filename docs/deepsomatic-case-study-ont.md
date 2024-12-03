@@ -8,6 +8,8 @@ data. We use HCC1395 as an example for this case study.
 For this case-study, we use HCC1395 as an example. We run the analysis on `chr1`
 that we hold out during training.
 
+Please see the [metrics page](metrics.md) for details on runtime and data.
+
 ## Prepare environment
 
 ### Tools
@@ -60,7 +62,7 @@ DeepVariant pipeline consists of 3 steps: `make_examples_somatic`, `call_variant
 ### Running on a CPU-only machine
 
 ```bash
-BIN_VERSION="1.7.0"
+BIN_VERSION="1.8.0"
 
 sudo docker pull google/deepsomatic:"${BIN_VERSION}"
 
@@ -110,7 +112,7 @@ The output:
 
 ```
       type  total.truth  total.query    tp  fp   fn  unk  ambi    recall  recall_lower  recall_upper   recall2  precision  precision_lower  precision_upper  na  ambiguous  fp.region.size   fp.rate
-0   indels          133          105    86  19   47    0     0  0.646617      0.562921      0.724009  0.646617   0.819048         0.737291         0.883505   0          0       248956422  0.076319
+0   indels          133          104    86  18   47    0     0  0.646617      0.562921      0.724009  0.646617   0.826923         0.745769         0.890185   0          0       248956422  0.072302
 1     SNVs         3440         2660  2619  41  821    0     0  0.761337      0.746877      0.775358  0.761337   0.984586         0.979363         0.988757   0          0       248956422  0.164687
-5  records         3573         2765  2705  60  868    0     0  0.757067      0.742801      0.770917  0.757067   0.978300         0.972358         0.983242   0          0       248956422  0.241006
+5  records         3573         2764  2705  59  868    0     0  0.757067      0.742801      0.770917  0.757067   0.978654         0.972754         0.983553   0          0       248956422  0.236989
 ```

@@ -1,5 +1,17 @@
 # Runtime and accuracy metrics for all release models
 
+## Setup
+
+The runtime and accuracy reported in this page are generated using
+`n2-standard-96` GCP instances which has the following configuration:
+
+```bash
+GCP instance type: n2-standard-96
+CPUs: 96-core (vCPU)
+Memory: 384GiB
+GPUs: 0
+```
+
 ## WGS (Illumina)
 
 Below are the numbers from an Illumina WGS run.
@@ -19,11 +31,11 @@ Reported runtime is an average of 5 runs.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 91m34.23s
-call_variants                    | 288m15.12s
-postprocess_variants (no gVCF)   | 4m52.52s
-vcf_stats_report (optional)      | 1m27.04s
-total                            | 397m55.94s (~6h37m)
+make_examples_somatic            | 67m1.66s
+call_variants                    | 212m35.57s
+postprocess_variants (no gVCF)   | 1m5.76s
+vcf_stats_report (optional)      | 3m6.48s
+total                            | 293m38.21s (~4h53m)
 
 ### Accuracy
 
@@ -55,11 +67,11 @@ Reported runtime is an average of 5 runs.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 13m21.19s
-call_variants                    | 6m38.14s
-postprocess_variants (no gVCF)   | 0m11.24s
-vcf_stats_report (optional)      | 0m13.06s
-total                            | 24m0.70s
+make_examples_somatic            | 9m17.72s
+call_variants                    | 4m55.99s
+postprocess_variants (no gVCF)   | 0m5.09s
+vcf_stats_report (optional)      | 0m7.29s
+total                            | 18m35.83s
 
 ### Accuracy
 
@@ -91,11 +103,11 @@ Reported runtime is an average of 5 runs.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 236m38.41s
-call_variants                    | 208m35.56s
-postprocess_variants (no gVCF)   | 7m17.39s
-vcf_stats_report (optional)      | 0m9.94s
-total                            | 464m39.66s (~7h43m)
+make_examples_somatic            | 164m33.85s
+call_variants                    | 160m15.53s
+postprocess_variants (no gVCF)   | 1m46.21s
+vcf_stats_report (optional)      | 4m39.58s
+total                            | 340m38.03s (~5h40m)
 
 ### Accuracy
 
@@ -127,11 +139,11 @@ Reported runtime is an average of 5 runs.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 172m36.48s
-call_variants                    | 454m14.42s
-postprocess_variants (no gVCF)   | 14m38.69s
-vcf_stats_report (optional)      | 0m10.24s
-total                            | 655m4.48s (~10h55m)
+make_examples_somatic            | 120m50.85s
+call_variants                    | 342m3.23s
+postprocess_variants (no gVCF)   | 3m34.63s
+vcf_stats_report (optional)      | 9m7.72s
+total                            | 484m9.62s (~8h4m)
 
 ### Accuracy
 
@@ -139,9 +151,9 @@ somp.py results
 
 ```
       type  total.truth  total.query     tp    fp    fn  unk  ambi    recall  recall_lower  recall_upper   recall2  precision  precision_lower  precision_upper  na  ambiguous  fp.region.size   fp.rate
-0   indels         1626         1242   1027   215   599    0     0  0.631611      0.607948      0.654806  0.631611   0.826892         0.805103         0.847160   0          0      2875001522  0.074783
+0   indels         1626         1240   1027   213   599    0     0  0.631611      0.607948      0.654806  0.631611   0.828226         0.806479         0.848442   0          0      2875001522  0.074087
 1     SNVs        39447        31411  30603   808  8844    0     0  0.775800      0.771665      0.779896  0.775800   0.974277         0.972482         0.975984   0          0      2875001522  0.281043
-5  records        41073        32653  31630  1023  9443    0     0  0.770092      0.766004      0.774142  0.770092   0.968671         0.966739         0.970519   0          0      2875001522  0.355826
+5  records        41073        32651  31630  1021  9443    0     0  0.770092      0.766004      0.774142  0.770092   0.968730         0.966800         0.970576   0          0      2875001522  0.355130
 ```
 
 ## FFPE WGS
@@ -163,11 +175,11 @@ Reported runtime is an average of 5 runs.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 165m18.70s
-call_variants                    | 617m2.60s
-postprocess_variants (no gVCF)   | 8m25.83s
-vcf_stats_report (optional)      | 1m33.19s
-total                            | 804m31.57s (~13h24m)
+make_examples_somatic            | 117m18.53s
+call_variants                    | 411m54.19s
+postprocess_variants (no gVCF)   | 2m5.70s
+vcf_stats_report (optional)      | 6m7.85s
+total                            | 548m32.26s (~9h8m)
 
 ### Accuracy
 
@@ -199,11 +211,11 @@ Reported runtime is an average of 5 runs.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 21m15.66s
-call_variants                    | 7m20.05s
-postprocess_variants (no gVCF)   | 0m10.33s
-vcf_stats_report (optional)      | 0m12.43s
-total                            | 39m46.02s
+make_examples_somatic            | 14m26.69s
+call_variants                    | 5m10.49s
+postprocess_variants (no gVCF)   | 0m5.41s
+vcf_stats_report (optional)      | 0m7.46s
+total                            | 31m16.63s
 
 ### Accuracy
 
@@ -234,11 +246,11 @@ Reported runtime is an average of 5 runs.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 51m30.88s
-call_variants                    | 147m58.64s
-postprocess_variants (no gVCF)   | 5m23.37s
-vcf_stats_report (optional)      | 1m18.62s
-total                            | 218m9.07s (~3h38m)
+make_examples_somatic            | 36m20.64s
+call_variants                    | 107m41.56s
+postprocess_variants (no gVCF)   | 1m44.98s
+vcf_stats_report (optional)      | 3m37.17s
+total                            | 160m20.35s (~2h40m)
 
 ### Accuracy
 
@@ -269,11 +281,11 @@ Reported runtime is an average of 5 runs.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 91m52.49s
-call_variants                    | 381m14.36s
-postprocess_variants (no gVCF)   | 14m3.23s
-vcf_stats_report (optional)      | 0m8.63s
-total                            | 502m58.95s (~8h23m)
+make_examples_somatic            | 61m31.58s
+call_variants                    | 240m40.88s
+postprocess_variants (no gVCF)   | 4m23.34s
+vcf_stats_report (optional)      | 10m16.97s
+total                            | 327m5.35s (~3h27m)
 
 ### Accuracy
 
@@ -281,9 +293,9 @@ somp.py results
 
 ```
       type  total.truth  total.query     tp     fp    fn  unk  ambi    recall  recall_lower  recall_upper   recall2  precision  precision_lower  precision_upper  na  ambiguous  fp.region.size   fp.rate
-0   indels         1626         2157    945   1212   681    0     0  0.581181      0.557074      0.604999  0.581181   0.438108         0.417265         0.459118   0          0      2875001522  0.421565
+0   indels         1626         2165    945   1220   681    0     0  0.581181      0.557074      0.604999  0.581181   0.436490         0.415695         0.457454   0          0      2875001522  0.424348
 1     SNVs        39447        51371  30570  20801  8877    0     0  0.774964      0.770823      0.779065  0.774964   0.595083         0.590833         0.599322   0          0      2875001522  7.235127
-5  records        41073        53527  31515  22012  9558    0     0  0.767292      0.763187      0.771360  0.767292   0.588768         0.584595         0.592932   0          0      2875001522  7.656344
+5  records        41073        53535  31515  22020  9558    0     0  0.767292      0.763187      0.771360  0.767292   0.588680         0.584507         0.592844   0          0      2875001522  7.659126
 ```
 
 ## PacBio tumor-only
@@ -304,11 +316,11 @@ Reported runtime is an average of 5 runs.
 
 Stage                            | Time (wall time)
 -------------------------------- | ------------------
-make_examples_somatic            | 118m19.70s
-call_variants                    | 215m30.22s
-postprocess_variants (no gVCF)   | 8m30.11s
-vcf_stats_report (optional)      | 0m8.00s
-total                            | 355m54.65s (~5h55m)
+make_examples_somatic            | 89m18.49s
+call_variants                    | 133m52.69s
+postprocess_variants (no gVCF)   | 2m54.10s
+vcf_stats_report (optional)      | 6m10.06s
+total                            | 242m29.53s (~4h2m)
 
 ### Accuracy
 
@@ -316,15 +328,15 @@ somp.py results
 
 ```
       type  total.truth  total.query     tp     fp    fn  unk  ambi    recall  recall_lower  recall_upper   recall2  precision  precision_lower  precision_upper  na  ambiguous  fp.region.size   fp.rate
-0   indels         1626         2365   1278   1087   348    0     0  0.785978      0.765545      0.805394  0.785978   0.540381         0.520256         0.560406   0          0      2875001522  0.378087
+0   indels         1626         2379   1278   1101   348    0     0  0.785978      0.765545      0.805394  0.785978   0.537201         0.517129         0.557181   0          0      2875001522  0.382956
 1     SNVs        39447        56874  37768  19106  1679    0     0  0.957437      0.955411      0.959395  0.957437   0.664064         0.660174         0.667938   0          0      2875001522  6.645562
-5  records        41073        59239  39046  20193  2027    0     0  0.950649      0.948522      0.952712  0.950649   0.659127         0.655302         0.662936   0          0      2875001522  7.023648
+5  records        41073        59253  39046  20207  2027    0     0  0.950649      0.948522      0.952712  0.950649   0.658971         0.655146         0.662780   0          0      2875001522  7.028518
 ```
 
 ## How to reproduce the metrics on this page
 
 For simplicity and consistency, we report runtime with a
-[CPU instance with 96 CPUs](https://github.com/google/deepvariant/blob/r1.7/docs/deepvariant-details.md#command-for-a-cpu-only-machine-on-google-cloud-platform)
+[CPU instance with 96 CPUs](https://github.com/google/deepvariant/blob/r1.8/docs/deepvariant-details.md#command-for-a-cpu-only-machine-on-google-cloud-platform)
 This is NOT the fastest or cheapest configuration.
 
 Use `gcloud compute ssh` to log in to the newly created instance.
@@ -333,7 +345,7 @@ Download and run any of the following case study scripts:
 
 ```
 # Get the script.
-curl -O https://raw.githubusercontent.com/google/deepvariant/r1.7/scripts/inference_deepsomatic.sh
+curl -O https://raw.githubusercontent.com/google/deepvariant/r1.8/scripts/inference_deepsomatic.sh
 
 # WGS
 bash inference_deepsomatic.sh --model_preset WGS

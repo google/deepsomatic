@@ -8,6 +8,8 @@ tumor-only data. We use HCC1395 as an example for this case study.
 For this case-study, we use HCC1395 as an example. We run the analysis on `chr1`
 that we hold out during training.
 
+Please see the [metrics page](metrics.md) for details on runtime and data.
+
 ## Allele frequency channel
 
 For accurate tumor-only calling, we use the allele-frequency channel that uses
@@ -66,7 +68,7 @@ DeepVariant pipeline consists of 3 steps: `make_examples_somatic`, `call_variant
 ### Running on a CPU-only machine
 
 ```bash
-BIN_VERSION="1.7.0"
+BIN_VERSION="1.8.0"
 
 sudo docker pull google/deepsomatic:"${BIN_VERSION}"
 
@@ -120,7 +122,7 @@ The output:
 
 ```
       type  total.truth  total.query    tp    fp   fn  unk  ambi    recall  recall_lower  recall_upper   recall2  precision  precision_lower  precision_upper  na  ambiguous  fp.region.size   fp.rate
-0   indels          133          184    84   100   49    0     0  0.631579      0.547480      0.710021  0.631579   0.456522         0.385697         0.528703   0          0       248956422  0.401677
+0   indels          133          185    84   101   49    0     0  0.631579      0.547480      0.710021  0.631579   0.454054         0.383486         0.526047   0          0       248956422  0.405693
 1     SNVs         3440         4816  3212  1604  228    0     0  0.933721      0.925041      0.941671  0.933721   0.666944         0.653535         0.680151   0          0       248956422  6.442895
-5  records         3573         5000  3296  1704  277    0     0  0.922474      0.913362      0.930902  0.922474   0.659200         0.645973         0.672243   0          0       248956422  6.844571
+5  records         3573         5001  3296  1705  277    0     0  0.922474      0.913362      0.930902  0.922474   0.659068         0.645841         0.672111   0          0       248956422  6.848588
 ```

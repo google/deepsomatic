@@ -1,6 +1,6 @@
 # DeepSomatic
 
-[![release](https://img.shields.io/badge/release-v1.7.0-green?logo=github)](https://github.com/google/deepvariant/releases)
+[![release](https://img.shields.io/badge/release-v1.8.0-green?logo=github)](https://github.com/google/deepvariant/releases)
 [![announcements](https://img.shields.io/badge/announcements-blue)](https://groups.google.com/d/forum/deepvariant-announcements)
 [![blog](https://img.shields.io/badge/blog-orange)](https://goo.gl/deepvariant)
 
@@ -12,6 +12,32 @@ and finally reports somatic variants in a standard VCF or gVCF file.
 
 DeepSomatic supports somatic variant-calling from tumor-normal and tumor-only
 sequencing data.
+
+## Code availability
+
+DeepSomatic is integrated with
+[DeepVariant](https://github.com/google/deepvariant) to utilize the high-quality
+end-to-end testing and feature development of DeepVariant.
+
+Here are the scripts that describe the core components of DeepSomatic:
+
+*   [run_deepsomatic](https://github.com/google/deepvariant/blob/r1.8.0/scripts/run_deepsomatic.py):
+    The DeepSomatic runner script.
+
+*   [make_examples_somatic](https://github.com/google/deepvariant/blob/r1.8.0/deepvariant/make_examples_somatic.py):
+    The `make_examples` step for DeepSomatic.
+
+*   [call_variants](https://github.com/google/deepvariant/blob/r1.8.0/deepvariant/call_variants.py):
+    Inference script that generates the variant calls.
+
+*   [postprocess_variants](https://github.com/google/deepvariant/blob/r1.8.0/deepvariant/postprocess_variants.py):
+    Updated with `process_somatic` option to process somatic variants.
+
+*   [dockerfile](https://github.com/google/deepvariant/blob/r1.8.0/Dockerfile.deepsomatic):
+    The Dockerfile for DeepSomatic.
+
+Integrating DeepSomatic within DeepVariant helps to maintain
+high-quality code health with integrated testing and feature development.
 
 ## Case studies
 

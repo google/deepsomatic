@@ -24,7 +24,7 @@ Docker image.
 ### Get Docker image
 
 ```bash
-BIN_VERSION="1.7.0"
+BIN_VERSION="1.8.0"
 
 sudo apt -y update
 sudo apt-get -y install docker.io
@@ -113,6 +113,7 @@ run_deepsomatic \
 --sample_name_normal="normal" \
 --num_shards=1 \
 --logging_dir=${OUTPUT_DIR}/logs \
+--vcf_stats_report=true \
 --intermediate_results_dir ${OUTPUT_DIR}/intermediate_results_dir \
 --regions=chr1:10,000,000-10,100,000
 ```

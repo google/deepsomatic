@@ -8,6 +8,8 @@ tumor-only data. We use HCC1395 as an example for this case study.
 For this case-study, we use HCC1395 as an example. We run the analysis on `chr1`
 that we hold out during training.
 
+Please see the [metrics page](metrics.md) for details on runtime and data.
+
 ## Allele frequency channel
 
 For accurate tumor-only calling, we use the allele-frequency channel that uses
@@ -66,7 +68,7 @@ DeepVariant pipeline consists of 3 steps: `make_examples_somatic`, `call_variant
 ### Running on a CPU-only machine
 
 ```bash
-BIN_VERSION="1.7.0"
+BIN_VERSION="1.8.0"
 
 sudo docker pull google/deepsomatic:"${BIN_VERSION}"
 
