@@ -67,7 +67,7 @@ The following case studies show example runs for supported technologies:
 
 *   ONT tumor-only [case study](docs/deepsomatic-case-study-ont-tumor-only.md).
 
-*   FFPE WGS tumor-only [case study](docs/deepsomatic-case-study-ffpe-wes-tumor-only.md).
+*   FFPE WGS tumor-only [case study](docs/deepsomatic-case-study-ffpe-wgs-tumor-only.md).
 
 *   FFPE WES tumor-only [case study](docs/deepsomatic-case-study-ffpe-wes-tumor-only.md).
 
