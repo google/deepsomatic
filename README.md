@@ -21,19 +21,19 @@ end-to-end testing and feature development of DeepVariant.
 
 Here are the scripts that describe the core components of DeepSomatic:
 
-*   [run_deepsomatic](https://github.com/google/deepvariant/blob/r1.9.0/scripts/run_deepsomatic.py):
+*   [run_deepsomatic](https://github.com/google/deepvariant/blob/r1.9/scripts/run_deepsomatic.py):
     The DeepSomatic runner script.
 
-*   [make_examples_somatic](https://github.com/google/deepvariant/blob/r1.9.0/deepvariant/make_examples_somatic.py):
+*   [make_examples_somatic](https://github.com/google/deepvariant/blob/r1.9/deepvariant/make_examples_somatic.py):
     The `make_examples` step for DeepSomatic.
 
-*   [call_variants](https://github.com/google/deepvariant/blob/r1.9.0/deepvariant/call_variants.py):
+*   [call_variants](https://github.com/google/deepvariant/blob/r1.9/deepvariant/call_variants.py):
     Inference script that generates the variant calls.
 
-*   [postprocess_variants](https://github.com/google/deepvariant/blob/r1.9.0/deepvariant/postprocess_variants.py):
+*   [postprocess_variants](https://github.com/google/deepvariant/blob/r1.9/deepvariant/postprocess_variants.py):
     Updated with `process_somatic` option to process somatic variants.
 
-*   [dockerfile](https://github.com/google/deepvariant/blob/r1.9.0/Dockerfile.deepsomatic):
+*   [dockerfile](https://github.com/google/deepvariant/blob/r1.9/Dockerfile.deepsomatic):
     The Dockerfile for DeepSomatic.
 
 Integrating DeepSomatic within DeepVariant helps to maintain
