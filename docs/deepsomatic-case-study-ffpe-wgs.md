@@ -90,8 +90,7 @@ the different model types, different flags are needed in the `make_examples`
 step.
 
 `--intermediate_results_dir` flag is optional. By specifying it, the
-intermediate outputs of `make_examples_somatic` and `call_variants` stages can
-be found in the directory.
+intermediate outputs of `make_examples_somatic` and `call_variants` stages can be found in the directory.
 
 ```bash
 sudo docker pull pkrusche/hap.py:latest
@@ -112,8 +111,8 @@ ${OUTPUT_DIR}/HCC1395_deepsomatic_output.vcf.gz \
 The output:
 
 ```
-      type  total.truth  total.query    tp   fp   fn  unk  ambi   recall  recall_lower  recall_upper  recall2  precision  precision_lower  precision_upper  na  ambiguous  fp.region.size   fp.rate
-0   indels          133          122   100   22   33    0     0  0.75188      0.673603      0.819331  0.75188   0.819672         0.744396         0.879996   0          0       248956422  0.088369
-1     SNVs         3440         2984  2823  161  617    0     0  0.82064      0.807552      0.833188  0.82064   0.946046         0.937503         0.953723   0          0       248956422  0.646700
-5  records         3573         3106  2923  183  650    0     0  0.81808      0.805176      0.830469  0.81808   0.941082         0.932387         0.948955   0          0       248956422  0.735068
+      type  total.truth  total.query    tp   fp   fn  unk  ambi    recall  recall_lower  recall_upper   recall2  precision  precision_lower  precision_upper  na  ambiguous  fp.region.size   fp.rate
+0   indels          133          138   107   31   26    0     0  0.804511      0.730987      0.864953  0.804511   0.775362         0.700491         0.838825   0          0       248956422  0.124520
+1     SNVs         3440         3015  2844  171  596    0     0  0.826744      0.813825      0.839114  0.826744   0.943284         0.934599         0.951118   0          0       248956422  0.686867
+5  records         3573         3153  2951  202  622    0     0  0.825917      0.813222      0.838083  0.825917   0.935934         0.926985         0.944084   0          0       248956422  0.811387
 ```
