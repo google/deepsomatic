@@ -40,21 +40,21 @@ mkdir -p "${OUTPUT_DIR}"
 mkdir -p "${OUTPUT_DIR}/sompy_output"
 
 # Download PacBio Tumor Bam
-gsutil cp gs://deepvariant/deepsomatic-case-studies/deepsomatic-chr1-case-studies/HCC1395.GRCh38.tumor.chr1.nygc.bam* ${INPUT_DIR}/
+gcloud storage cp gs://deepvariant/deepsomatic-case-studies/deepsomatic-chr1-case-studies/HCC1395.GRCh38.tumor.chr1.nygc.bam* ${INPUT_DIR}/
 
 # Download Illumina Normal WGS
-gsutil cp gs://deepvariant/deepsomatic-case-studies/deepsomatic-chr1-case-studies/HCC1395_wgs.normal.chr1.bam* ${INPUT_DIR}/
+gcloud storage cp gs://deepvariant/deepsomatic-case-studies/deepsomatic-chr1-case-studies/HCC1395_wgs.normal.chr1.bam* ${INPUT_DIR}/
 
 # Download a reference genome
-gsutil cp gs://deepvariant/deepsomatic-case-studies/deepsomatic-chr1-case-studies/GCA_000001405.15_GRCh38_no_alt_analysis_set.chr1.fna* ${INPUT_DIR}/
+gcloud storage cp gs://deepvariant/deepsomatic-case-studies/deepsomatic-chr1-case-studies/GCA_000001405.15_GRCh38_no_alt_analysis_set.chr1.fna* ${INPUT_DIR}/
 
 # Download truth VCF
-gsutil -m cp gs://deepvariant/deepsomatic-case-studies/SEQC2-S1395-truth/High-Confidence_Regions_v1.2.bed \
+gcloud storage cp gs://deepvariant/deepsomatic-case-studies/SEQC2-S1395-truth/High-Confidence_Regions_v1.2.bed \
 gs://deepvariant/deepsomatic-case-studies/SEQC2-S1395-truth/high-confidence_sINDEL_sSNV_in_HC_regions_v1.2.1.merged.vcf.gz* \
 gs://deepvariant/deepsomatic-case-studies/SEQC2-S1395-truth/seqc2_hg38.exome_regions.bed ${INPUT_DIR}
 
 # Download the model
-gsutil -m cp gs://deepvariant/models/experimental/deepsomatic_hybrid/exp_157994267/* ${INPUT_DIR}
+gcloud storage cp gs://deepvariant/models/experimental/deepsomatic_hybrid/exp_157994267/* ${INPUT_DIR}
 ```
 
 ## Running DeepSomatic with one command
