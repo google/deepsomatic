@@ -1,6 +1,6 @@
 # DeepSomatic
 
-[![release](https://img.shields.io/badge/release-v1.9.0-green?logo=github)](https://github.com/google/deepvariant/releases)
+[![release](https://img.shields.io/badge/release-v1.10.0-green?logo=github)](https://github.com/google/deepvariant/releases)
 [![announcements](https://img.shields.io/badge/announcements-blue)](https://groups.google.com/d/forum/deepvariant-announcements)
 [![blog](https://img.shields.io/badge/blog-orange)](https://goo.gl/deepvariant)
 
@@ -21,19 +21,19 @@ end-to-end testing and feature development of DeepVariant.
 
 Here are the scripts that describe the core components of DeepSomatic:
 
-*   [run_deepsomatic](https://github.com/google/deepvariant/blob/r1.9/scripts/run_deepsomatic.py):
+*   [run_deepsomatic](https://github.com/google/deepvariant/blob/r1.10/scripts/run_deepsomatic.py):
     The DeepSomatic runner script.
 
-*   [make_examples_somatic](https://github.com/google/deepvariant/blob/r1.9/deepvariant/make_examples_somatic.py):
+*   [make_examples_somatic](https://github.com/google/deepvariant/blob/r1.10/deepvariant/make_examples_somatic.py):
     The `make_examples` step for DeepSomatic.
 
-*   [call_variants](https://github.com/google/deepvariant/blob/r1.9/deepvariant/call_variants.py):
+*   [call_variants](https://github.com/google/deepvariant/blob/r1.10/deepvariant/call_variants.py):
     Inference script that generates the variant calls.
 
-*   [postprocess_variants](https://github.com/google/deepvariant/blob/r1.9/deepvariant/postprocess_variants.py):
+*   [postprocess_variants](https://github.com/google/deepvariant/blob/r1.10/deepvariant/postprocess_variants.py):
     Updated with `process_somatic` option to process somatic variants.
 
-*   [dockerfile](https://github.com/google/deepvariant/blob/r1.9/Dockerfile.deepsomatic):
+*   [dockerfile](https://github.com/google/deepvariant/blob/r1.10/Dockerfile.deepsomatic):
     The Dockerfile for DeepSomatic.
 
 Integrating DeepSomatic within DeepVariant helps to maintain

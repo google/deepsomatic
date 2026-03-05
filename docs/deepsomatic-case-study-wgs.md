@@ -62,7 +62,7 @@ DeepVariant pipeline consists of 3 steps: `make_examples_somatic`, `call_variant
 ### Running on a CPU-only machine
 
 ```bash
-BIN_VERSION="1.9.0"
+BIN_VERSION="1.10.0"
 
 sudo docker pull google/deepsomatic:"${BIN_VERSION}"
 
@@ -112,7 +112,7 @@ The output:
 
 ```
       type  total.truth  total.query    tp  fp   fn  unk  ambi    recall  recall_lower  recall_upper   recall2  precision  precision_lower  precision_upper  na  ambiguous  fp.region.size   fp.rate
-0   indels          133          149   127  22    6    0     0  0.954887      0.909391      0.980954  0.954887   0.852349         0.788841         0.902333   0          0       248956422  0.088369
-1     SNVs         3440         3334  3302  32  138    0     0  0.959884      0.952935      0.966059  0.959884   0.990402         0.986652         0.993302   0          0       248956422  0.128537
-5  records         3573         3483  3429  54  144    0     0  0.959698      0.952873      0.965778  0.959698   0.984496         0.979981         0.988207   0          0       248956422  0.216905
+0   indels          133          142   125  17    8    0     0  0.939850      0.889721      0.971155  0.939850   0.880282         0.819356         0.925908   0          0       248956422  0.068285
+1     SNVs         3440         3344  3311  33  129    0     0  0.962500      0.955758      0.968465  0.962500   0.990132         0.986343         0.993073   0          0       248956422  0.132553
+5  records         3573         3486  3436  50  137    0     0  0.961657      0.954982      0.967584  0.961657   0.985657         0.981296         0.989212   0          0       248956422  0.200838
 ```

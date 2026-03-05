@@ -24,7 +24,7 @@ Docker image.
 ### Get Docker image
 
 ```bash
-BIN_VERSION="1.9.0"
+BIN_VERSION="1.10.0"
 
 sudo apt -y update
 sudo apt-get -y install docker.io

@@ -3,7 +3,7 @@
 In this case study, we show an example of running DeepSomatic using a custom
 hybrid model that uses PacBio for tumor data and Illumina for a normal sample.
 
-This experimental model is being shared as part of the r1.9 documentation.
+This experimental model is being shared as part of the r1.10 documentation.
 Inclusion of updated version of this model in future releases is not guaranteed.
 
 We use HCC1395 as an example for this case study.
@@ -81,7 +81,7 @@ INPUT_DIR="${BASE}/input/data"
 OUTPUT_DIR="${BASE}/output"
 
 # Set DeepSomatic version:
-BIN_VERSION="1.9.0"
+BIN_VERSION="1.10.0"
 
 docker pull google/deepsomatic:"${BIN_VERSION}"
 docker run \

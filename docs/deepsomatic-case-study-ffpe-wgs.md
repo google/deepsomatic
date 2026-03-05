@@ -62,7 +62,7 @@ DeepVariant pipeline consists of 3 steps: `make_examples_somatic`, `call_variant
 ### Running on a CPU-only machine
 
 ```bash
-BIN_VERSION="1.9.0"
+BIN_VERSION="1.10.0"
 
 sudo docker pull google/deepsomatic:"${BIN_VERSION}"
 
@@ -90,7 +90,8 @@ the different model types, different flags are needed in the `make_examples`
 step.
 
 `--intermediate_results_dir` flag is optional. By specifying it, the
-intermediate outputs of `make_examples_somatic` and `call_variants` stages can be found in the directory.
+intermediate outputs of `make_examples_somatic` and `call_variants` stages can
+be found in the directory.
 
 ```bash
 sudo docker pull pkrusche/hap.py:latest
@@ -112,7 +113,7 @@ The output:
 
 ```
       type  total.truth  total.query    tp   fp   fn  unk  ambi    recall  recall_lower  recall_upper   recall2  precision  precision_lower  precision_upper  na  ambiguous  fp.region.size   fp.rate
-0   indels          133          138   107   31   26    0     0  0.804511      0.730987      0.864953  0.804511   0.775362         0.700491         0.838825   0          0       248956422  0.124520
-1     SNVs         3440         3015  2844  171  596    0     0  0.826744      0.813825      0.839114  0.826744   0.943284         0.934599         0.951118   0          0       248956422  0.686867
-5  records         3573         3153  2951  202  622    0     0  0.825917      0.813222      0.838083  0.825917   0.935934         0.926985         0.944084   0          0       248956422  0.811387
+0   indels          133          140   106   34   27    0     0  0.796992      0.722688      0.858537  0.796992   0.757143         0.681350         0.822430   0          0       248956422  0.136570
+1     SNVs         3440         3018  2847  171  593    0     0  0.827616      0.814721      0.839960  0.827616   0.943340         0.934664         0.951167   0          0       248956422  0.686867
+5  records         3573         3158  2953  205  620    0     0  0.826476      0.813797      0.838627  0.826476   0.935085         0.926092         0.943282   0          0       248956422  0.823437
 ```
